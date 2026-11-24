@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Librăria Online - Cărți pentru Suflet</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #f0f2f5; color: #2c3e50; }
+        header { background: #2c3e50; color: white; text-align: center; padding: 25px 10px; }
+        header h1 { margin: 0 0 5px 0; font-size: 26px; }
+        header p { margin: 0 0 15px 0; color: #bdc3c7; font-size: 14px; }
+        nav button { background: #34495e; color: white; border: none; padding: 10px 20px; margin: 3px; cursor: pointer; border-radius: 5px; font-weight: bold; transition: 0.3s; }
+        nav button:hover, nav button.active { background: #e67e22; }
+        main { max-width: 750px; margin: 25px auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
+        .page { display: none; }
+        .page.active { display: block; }
+        h2 { color: #2c3e50; border-bottom: 2px solid #e67e22; padding-bottom: 8px; margin-top: 0; }
+        h3 { color: #d35400; margin-top: 20px; }
+        figure { text-align: center; margin: 20px 0; }
+        figure img { max-width: 100%; height: auto; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+        figcaption { font-style: italic; color: #7f8c8d; margin-top: 6px; font-size: 13px; }
+        ul, ol { line-height: 1.8; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { border: 1px solid #e0e0e0; padding: 10px; text-align: left; }
+        th { background: #2c3e50; color: white; }
+        tr:nth-child(even) { background: #f9f9f9; }
+        form { background: #fafafa; padding: 20px; border: 1px solid #e0e0e0; border-radius: 6px; }
+        label { font-weight: bold; display: block; margin-top: 10px; font-size: 14px; }
+        input[type="text"], input[type="email"], select, textarea { width: 100%; padding: 9px; margin-top: 4px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        .btn-group { margin-top: 15px; }
+        input[type="submit"] { background: #e67e22; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        input[type="submit"]:hover { background: #d35400; }
+        input[type="reset"] { background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; margin-left: 8px; }
+        footer { text-align: center; padding: 15px; background: #2c3e50; color: white; font-size: 13px; margin-top: 30px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Librăria Online „Cărți pentru Suflet”</h1>
+        <p>Sursa ta de inspirație și cunoaștere în fiecare zi</p>
+        <nav>
+            <button class="nav-btn active" onclick="schimbaPagina('acasa', this)">Acasă</button>
+            <button class="nav-btn" onclick="schimbaPagina('catalog', this)">Catalog Cărți</button>
+            <button class="nav-btn" onclick="schimbaPagina('contact', this)">Comandă & Contact</button>
+        </nav>
+    </header>
+
+    <main>
+        <div id="acasa" class="page active">
+            <h2>Despre Librăria Noastră</h2>
+            <p>Bine ai venit în spațiul nostru dedicat iubitorilor de lectură! Îți oferim o selecție bogată de cărți din literatura națională și internațională, livrate rapid la tine acasă.</p>
+            
+            <figure>
+                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600" alt="Rafturi de cărți">
+                <figcaption>O bibliotecă bogată este cea mai frumoasă călătorie a minții.</figcaption>
+            </figure>
+
+            <h3>De ce să alegi librăria noastră?</h3>
+            <ul>
+                <li><strong>Selecție variată:</strong> Mii de titluri din toate domeniile literare.</li>
+                <li><strong>Reduceri periodice:</strong> Oferte speciale pentru studenți și elevi.</li>
+                <li><strong>Livrare flexibilă:</strong> Format fizic prin curier sau descărcare e-Book.</li>
+            </ul>
+        </div>
+        <div id="catalog" class="page">
+            <h2>Catalogul de Cărți</h2>
+            
+            <h3>Categorii Principale:</h3>
+            <ol>
+                <li>Ficțiune & Romane Clasice</li>
+                <li>Dezvoltare Personală & Psihologie</li>
+                <li>Literatură Istorică & Biografii</li>
+            </ol>
+
+            <h3>Bestseller-uri Disponibile:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Titlu Carte</th>
+                        <th>Autor</th>
+                        <th>Gen Literar</th>
+                        <th>Preț</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Micul Prinț</td>
+                        <td>Antoine de Saint-Exupéry</td>
+                        <td>Clasici / Ficțiune</td>
+                        <td>120 MDL</td>
+                    </tr>
+                    <tr>
+                        <td>Tema pentru acasă</td>
+                        <td>Nicolae Dabija</td>
+                        <td>Roman Istoric</td>
+                        <td>180 MDL</td>
+                    </tr>
+                    <tr>
+                        <td>Atomic Habits</td>
+                        <td>James Clear</td>
+                        <td>Dezvoltare Personală</td>
+                        <td>250 MDL</td>
+                    </tr>
+                    <tr>
+                        <td>Alchimistul</td>
+                        <td>Paulo Coelho</td>
+                        <td>Ficțiune Filozofică</td>
+                        <td>160 MDL</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="contact" class="page">
+            <h2>Comandă sau Solicită Informații</h2>
+            <p>Completează formularul de mai jos pentru a plasa o comandă sau pentru recomandări de carte:</p>
+
+            <form action="#" method="post">
+                <label for="nume">Nume și Prenume:</label>
+                <input type="text" id="nume" name="nume" required placeholder="Ex: Popescu Maria">
+
+                <label for="email">Adresă Email:</label>
+                <input type="email" id="email" name="email" required placeholder="exemplu@mail.com">
+
+                <label for="format">Formatul dorit:</label>
+                <select id="format" name="format">
+                    <option value="fizic">Carte Tipărită (Format Fizic)</option>
+                    <option value="ebook">E-Book (PDF / EPUB)</option>
+                    <option value="audiobook">Audiobook</option>
+                </select>
+
+                <label for="carte">Titlul Cărții:</label>
+                <input type="text" id="carte" name="carte" placeholder="Ex: Micul Prinț">
+
+                <label for="mesaj">Mesaj sau Adresă de Livrare:</label>
+                <textarea id="mesaj" name="mesaj" rows="3" placeholder="Scrie detaliile comenzii..."></textarea>
+
+                <div class="btn-group">
+                    <input type="submit" value="Trimite Comanda">
+                    <input type="reset" value="Resetează">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Librăria Online „Cărți pentru Suflet”. Proiect realizat în HTML & CSS[cite: 1].</p>
+    </footer>
+
+    <script>
+        function schimbaPagina(idPagina, buton) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(idPagina).classList.add('active');
+            buton.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
